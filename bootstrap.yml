@@ -14,11 +14,3 @@
       user:
         name: xyzcorp_audit
         state: present
-    - name: Copy /home/ansible/motd to /etc/
-      copy:
-        src: /home/ansible/motd
-        dest: /etc/motd
-    - name: Copy /home/ansible/issue to /etc/
-      copy:
-        src: /home/ansible/issue
-        dest: /etc/issue
