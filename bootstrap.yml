@@ -22,23 +22,3 @@
       copy:
         src: /home/ansible/issue
         dest: /etc/issue
-
-- hosts: network
-  become: yes
-  tasks:
-    - name: Install netcat
-      yum:
-        name: nmap-ncat 
-        state: latest
-    - name: Create user xyzcorp_network
-      user:
-        name: xyzcorp_network
-        state: present
-
-- hosts: sysadmin
-  become: yes
-  tasks:
-    - name: Copy /home/ansible/scripts.tgz to /mnt/storage
-      copy:
-        src: /home/ansible/scripts.tgz
-        dest: /mnt/storage
